@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Deret</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Deret</h1>   
+        <form id="geometry-form">
+            <label for="shape">Pilih Jenis Deret:</label>
+            <select id="shape" name="shape">
+                <option value="geometric-sequence">Deret Geometri</option>
+                <option value="arithmetic-sequence">Deret Aritmatika</option>
+                <option value="infinite-geometric-sequence">Deret Geometri Tak Hingga</option>
+            </select>
+
+            <div class="input-field geometric-sequence" style="display: none;">
+                <div class="sequence">
+                    <label for="first-term">Suku Pertama:</label>
+                    <input type="number" id="first-term" name="first-term" step="0.01">
+                    <label for="common-ratio">Rasio Umum:</label>
+                    <input type="number" id="common-ratio" name="common-ratio" step="0.01">
+                    <label for="number-of-terms">Jumlah Suku:</label>
+                    <input type="number" id="number-of-terms" name="number-of-terms" step="1">
+                </div>
+            </div>
+
+            <div class="input-field arithmetic-sequence" style="display: none;">
+                <div class="sequence">
+                    <label for="first-term-arithmetic">Suku Pertama:</label>
+                    <input type="number" id="first-term-arithmetic" name="first-term-arithmetic" step="0.01">
+                    <label for="common-difference">Beda:</label>
+                    <input type="number" id="common-difference" name="common-difference" step="0.01">
+                    <label for="number-of-terms-arithmetic">Jumlah Suku:</label>
+                    <input type="number" id="number-of-terms-arithmetic" name="number-of-terms-arithmetic" step="1">
+                </div>
+            </div>
+
+            <div class="input-field infinite-geometric-sequence" style="display: none;">
+               <div class="sequence">
+                 <label for="first-term-infinite">Suku Pertama:</label>
+                 <input type="number" id="first-term-infinite" name="first-term-infinite" step="0.01">
+                 <label for="common-ratio-infinite">Rasio Umum:</label>
+                 <input type="number" id="common-ratio-infinite" name="common-ratio-infinite" step="0.01">
+               </div>
+            </div>
+
+            <button type="submit">Hitung</button>
+        </form>
+        <p id="result"></p>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
